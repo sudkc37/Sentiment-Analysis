@@ -13,7 +13,6 @@ The resulting application features a dashboard with a user-friendly interface th
 The article also provides a simple breakdown and architecture of the model, illustrating the workflow and integration of various components. 
 
 **Scraper.py**
-
 It uses a Yahoo Finance API with a built-in scraping method to extract the news feed from the Yahoo Finance webpage. The API returns financial news as an RSS feed in XML format, fetching the latest financial news published on Yahoo Finance in real-time. We are only using the summary content of each news feed. For simplicity, I have directly fed the summary content into our language model (FinBERT). However, to achieve more robust analysis, we could further leverage large language models (LLMs) like GPT to summarize the news before feeding it into our custom language model. That said, using GPT incurs additional costs.
 
 **LanguageModel.py**
