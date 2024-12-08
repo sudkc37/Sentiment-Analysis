@@ -6,6 +6,7 @@ from detail import ticker_detail
 import warnings
 warnings.filterwarnings("ignore")
 from graph import plot_price
+import os
 
 app = Flask(__name__)
 
@@ -64,4 +65,5 @@ def home():
     )
 
 if __name__ == "__main__":
-    app.run(debug=True, threaded=True)
+    port = int(os.environ.get("PORT", 4000))
+    app.run(debug=True, threaded=True, host="0.0.0.0", port=port)
