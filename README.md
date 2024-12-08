@@ -27,7 +27,7 @@ It analyzes financial news summaries to determine overall market sentiment. It u
 
 **Detail.py**
 
-The ticker_detail function retrieves detailed financial information about a specific stock ticker using the “yfinance” library. It fetches various key metrics such as current price, open price, bid/ask prices, market cap, and industry, organizing them into a dictionary. Leveraging “yfinance.Ticker.info”, we can further model other key indicators like moving averages (MA), stochastic oscillation, implied volatility, gamma, and vega for advanced financial analysis.
+The ticker detail function retrieves detailed financial information about a specific stock ticker using the “yfinance” library. It fetches various key metrics such as current price, open price, bid/ask prices, market cap, and industry, organizing them into a dictionary. Leveraging “yfinance.Ticker.info”, we can further model other key indicators like moving averages (MA), stochastic oscillation, implied volatility, gamma, and vega for advanced financial analysis.
 
 **Graph.py**
 
