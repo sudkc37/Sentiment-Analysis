@@ -1,0 +1,12 @@
+torch
+torchvision
+torchaudio
+transformers
+requests 
+beautifulsoup4
+pandas
+yahoo_fin
+flask
+yfinance
+matplotlib
+datetime
