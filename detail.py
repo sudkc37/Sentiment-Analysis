@@ -25,4 +25,3 @@ def ticker_detail(ticker):
     #df = pd.DataFrame(data).T
     return data
 
-ticker_detail('AAPL')
