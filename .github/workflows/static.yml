@@ -1,4 +1,4 @@
-name: Deploy static content to Pages
+name: Generate and Deploy
 
 on:
   push:
@@ -6,44 +6,38 @@ on:
 
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  generate-files:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python (for app2.py)
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Install Dependencies (if needed)
-        run: |
-          pip install -r requirements.txt  # If you have a requirements.txt file
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
 
-      - name: Run app2.py (generate static files)
-        run: |
-          python app2.py  # Ensure this generates the static files (e.g., temp.html) in a folder like dist/
+      - name: Run app2.py
+        run: python app2.py
 
-      - name: Upload artifact (static files)
-        uses: actions/upload-pages-artifact@v3
+      - name: Save artifact
+        uses: actions/upload-artifact@v3
         with:
-          path: 'dist/'  # The folder containing your static files, like temp.html
+          name: static-files
+          path: dist/
+
+  deploy:
+    needs: generate-files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: static-files
 
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
-
