@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    ticker = request.args.get('ticker', 'TSLA') 
+    ticker = request.args.get('ticker) 
     market_sentiment = "N/A"
     sentiment_color = "gray"
     details = None

@@ -12,6 +12,9 @@ def plot_price(ticker):
     end_date = dt.datetime.now()
     start_date = (end_date - dt.timedelta(days=1)).date()
     quotes = yf.download(ticker, start=start_date, end=end_date, interval='1m')['Adj Close']
+    
+    if quotes.empty:
+        raise ValueError(f"No data found for ticker: {ticker}")
 
     plt.figure(figsize=(10,5))
     plt.plot(quotes.index, quotes)
