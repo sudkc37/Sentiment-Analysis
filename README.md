@@ -328,12 +328,7 @@ where;
 
 
 
-
-**Note: This article is for educational purposes only and is not intended to provide financial advice. It aims to demonstrate how language models can be utilized in financial applications.**
-
-
-
-**Deployment:**
+<h2>7. Deployment</h2>
 
 - Create a docker file
 
@@ -355,5 +350,7 @@ localhost:yourport
   
     - docker push username/appname
 
+
+**Note: This article is for educational purposes only and is not intended to provide financial advice. It aims to demonstrate how language models can be utilized in financial applications.**
 
 **Note: You can run the application locally. The app makes several API requests and has a size larger than the free deployment limits provided by some cloud platforms.**
