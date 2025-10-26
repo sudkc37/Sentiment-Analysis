@@ -15,6 +15,10 @@ Traditional approaches like Naive Bayes or logistic regression provide a solid f
 
 
 
+<p align="center">
+<img src="https://github.com/user-attachments/assets/f17aaa86-e154-43d7-acc5-66522ac4a71c" alt="Screenshot 2024-12-09 at 2 17 15 PM" width="500" height="500">
+</p>
+
 
 
 <h2>2. Transformer Architecture: Mathematical Foundation</h2>
