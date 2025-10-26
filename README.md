@@ -1,5 +1,5 @@
  <div align="center">
-  <h2>FinBERT Sentiment Analysis: Mathematical Foundations</h2>
+  <h2>FinBERT Sentiment Analysis</h2>
   <p><i>A Deep Dive into Transformer Architecture and Financial NLP</i></p>
   <p><i>Sudip Khadka</i></p>
 </div>
